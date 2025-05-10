@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .sparkle-large {
+      @apply w-[6px] h-[7px] rounded-full absolute;
+      background: radial-gradient(50% 50% at 50% 50%, #D6BDFF 0%, #7B2CFF 100%);
+      box-shadow: 0px 0px 10.67px #FFFFFF61;
+    }
+  
+    .sparkle-small {
+      @apply w-[4px] h-[5px] rounded-full absolute;
+      background: radial-gradient(50% 50% at 50% 50%, #D6BDFF 0%, #7B2CFF 100%);
+      box-shadow: 0px 0px 10.67px #FFFFFF61;
+    }
+  }
