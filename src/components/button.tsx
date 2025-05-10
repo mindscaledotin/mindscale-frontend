@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
   else sizeClass = "px-6 py-3 text-base";
 
   const combinedClassName = `
-    relative font-semibold rounded overflow-hidden 
+    relative font-lato  font-semibold rounded overflow-hidden 
     transition-all duration-300 
     border border-[#FFFFFF3B]
     ${!className ? sizeClass : ""}

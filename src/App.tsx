@@ -1,9 +1,9 @@
-import Navbar from "./assets/componants/navbar";
-import StarParallax from "./assets/componants/StarParallax";
+import Navbar from "./components/navbar";
+import StarParallax from "./components/StarParallax";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[linear-gradient(252.82deg,_#000000_0%,_#06257F_120.75%)]">
+    <div className="min-h-screen font-lato bg-[linear-gradient(252.82deg,_#000000_0%,_#06257F_120.75%)]">
       <Navbar />
       <StarParallax />
       <div className="pt-20">
