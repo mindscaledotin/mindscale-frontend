@@ -7,7 +7,7 @@ function App() {
       <Navbar />
       <StarParallax />
       <div className="pt-20">
-        {[...Array(10)].map((_, index) => (
+        {[...Array(9)].map((_, index) => (
           <div key={index} className="m-4 p-8 bg-white/10 rounded-lg backdrop-blur-sm">
             <h2 className="text-2xl text-white mb-4">Section {index + 1}</h2>
             <p className="text-gray-300">
