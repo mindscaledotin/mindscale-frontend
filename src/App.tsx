@@ -1,5 +1,9 @@
 import Navbar from "./components/navbar";
 import StarParallax from "./components/StarParallax";
+import ContactForm from "./components/ContactForm";
+
+
+
 
 function App() {
   return (
@@ -13,10 +17,13 @@ function App() {
             <p className="text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             
             </p>
           </div>
         ))}
       </div>
+       <ContactForm />
+
     </div>
   );
 }
