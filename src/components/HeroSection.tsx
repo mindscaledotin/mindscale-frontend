@@ -14,7 +14,6 @@ import logo8 from "../assets/client_logo/logo8.png";
 import logo9 from "../assets/client_logo/logo9.png";
 import logo10 from "../assets/client_logo/logo10.png";
 
-// Client logos array
 const clientLogos = [
   { id: 1, name: "Client 1", src: logo1 },
   { id: 2, name: "Client 2", src: logo2 },
