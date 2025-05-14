@@ -12,8 +12,9 @@ module.exports = {
         customBlue: '#0F69FF',
         customPurple: '#884DFF',
       },
+      
       backgroundImage: {
-        contactGradient: "linear-gradient(121.07deg, rgba(25, 24, 139, 0.15) 0.68%, rgba(0, 0, 0, 0.15) 99.51%)",
+        contactGradient:  'linear-gradient(90deg, #052275 0%, #040A19 100%)',
       },
     },
   },
