@@ -4,12 +4,14 @@ import ContactForm from "./components/ContactForm";
 
 
 
+import HeroSection from "./components/HeroSection";
 
 function App() {
   return (
     <div className="min-h-screen font-lato bg-[linear-gradient(252.82deg,_#000000_0%,_#06257F_120.75%)]">
       <Navbar />
       <StarParallax />
+      <HeroSection />
       <div className="pt-20">
         {[...Array(9)].map((_, index) => (
           <div key={index} className="m-4 p-8 bg-white/10 rounded-lg backdrop-blur-sm">
