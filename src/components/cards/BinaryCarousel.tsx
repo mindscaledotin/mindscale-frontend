@@ -1,35 +1,53 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
-const BinaryCarousel: React.FC<{ direction: "up" | "down"; numbers: string[] }> = ({ direction, numbers }) => {
-  const [offset, setOffset] = useState(0);
-  const totalItems = numbers.length;
+type Props = {
+  direction?: "up" | "down";
+  delay?: number; // in ms
+  columnCount?: number; // number of binary lines
+};
+
+const generateBinaryLines = (count: number) =>
+  Array.from({ length: count }, () =>
+    Math.floor(Math.random() * 2).toString() // Generates a single random binary digit
+  );
+
+export default function BinaryColumn({
+  direction = "up",
+  delay = 300,
+  columnCount = 12,
+}: Props) {
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setOffset((prev) => (prev + 1) % (totalItems)); // Increment offset
-    }, 600); // Adjust the speed of the transition here (600ms for slower speed)
+      if (containerRef.current) {
+        const container = containerRef.current;
+        if (direction === "up") {
+          const firstChild = container.children[0];
+          container.appendChild(firstChild);
+        } else {
+          const lastChild = container.children[container.children.length - 1];
+          container.insertBefore(lastChild, container.children[0]);
+        }
+      }
+    }, delay);
 
     return () => clearInterval(interval);
-  }, [totalItems]);
+  }, [direction, delay]);
 
   return (
-    <div className="overflow-hidden h-20">
+    <div className="h-64 w-8 overflow-hidden text-cyan-400 font-mono text-sm">
       <div
-        className="flex flex-col"
-        style={{
-          transform: direction === "up" ? `translateY(-${offset * 100}%)` : `translateY(${offset * 100}%)`,
-          transition: "transform 10s",
-        }}
+        ref={containerRef}
+        className="flex flex-col items-center transition-all duration-500 ease-in-out"
+        aria-live="polite" // Accessibility improvement
       >
-        {/* Render the numbers twice for seamless scrolling */}
-        {[...numbers, ...numbers].map((num, index) => (
-          <div key={index} className="text-2xl font-bold">
-            {num}
+        {generateBinaryLines(columnCount).map((line, idx) => (
+          <div key={idx} className="font-bold" style={{color:"#35FEFE", opacity:0.5}}>
+            {line}
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-export default BinaryCarousel;
+}

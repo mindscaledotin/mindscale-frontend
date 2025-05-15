@@ -1,15 +1,20 @@
 import Navbar from "./components/navbar";
 import StarParallax from "./components/StarParallax";
-import { CardGrid } from "./components/CardGrid";
+// import { CardGrid } from "./components/CardGrid";
 import WebDev from "./components/cards/WebDev";
-import HeroSection from "./components/HeroSection";
+// import GlowCircle from "./components/GlowCircle";
+// import HeroSection from "./components/HeroSection";
+// import BinaryCarousel from "./components/cards/BinaryCarousel";
 
 function App() {
+   
   return (
     <div className="min-h-screen font-lato bg-[linear-gradient(252.82deg,_#000000_0%,_#06257F_120.75%)]">
       <Navbar />
       <StarParallax />
-      <div className="pt-20">
+      <WebDev/>
+
+      {/* <div className="pt-20">
         {[...Array(9)].map((_, index) => (
           <div key={index} className="m-4 p-8 bg-white/10 rounded-lg backdrop-blur-sm">
             <h2 className="text-2xl text-white mb-4">Section {index + 1}</h2>
@@ -19,10 +24,13 @@ function App() {
             </p>
           </div>
         ))}
-      </div>  
+      </div>   */}
      
 
+      {/* <BinaryCarousel/> */}
+      
       {/* <CardGrid/> */}
+      {/* <GlowCircle size={300}/> */}
       
 
     </div>
