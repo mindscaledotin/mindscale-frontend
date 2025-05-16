@@ -2,9 +2,12 @@ import Navbar from "./components/navbar";
 import StarParallax from "./components/StarParallax";
 // import { CardGrid } from "./components/CardGrid";
 import WebDev from "./components/cards/WebDev";
-// import GlowCircle from "./components/GlowCircle";
+// import DataAnalytics from "./components/cards/DataAnalytics";
+// import QACard from "./components/cards/QACard";
+// import UiUxCard from "./components/cards/UiUxCard";
 // import HeroSection from "./components/HeroSection";
-// import BinaryCarousel from "./components/cards/BinaryCarousel";
+// import AiCard from "./components/cards/AiCard";
+
 
 function App() {
    
@@ -13,6 +16,10 @@ function App() {
       <Navbar />
       <StarParallax />
       <WebDev/>
+      {/* <DataAnalytics/> */}
+      {/* <QACard/> */}
+      {/* <UiUxCard/> */}
+      {/* <AiCard/> */}
 
       {/* <div className="pt-20">
         {[...Array(9)].map((_, index) => (
@@ -24,13 +31,13 @@ function App() {
             </p>
           </div>
         ))}
-      </div>   */}
-     
+      </div>  
+      */}
 
-      {/* <BinaryCarousel/> */}
+      
       
       {/* <CardGrid/> */}
-      {/* <GlowCircle size={300}/> */}
+      
       
 
     </div>

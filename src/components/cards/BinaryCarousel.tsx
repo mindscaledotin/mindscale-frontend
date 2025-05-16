@@ -2,52 +2,76 @@ import React, { useEffect, useRef } from "react";
 
 type Props = {
   direction?: "up" | "down";
-  delay?: number; // in ms
-  columnCount?: number; // number of binary lines
+  height?: number;
+  speed?: number;
+  repeatCount?: number;
 };
 
-const generateBinaryLines = (count: number) =>
-  Array.from({ length: count }, () =>
-    Math.floor(Math.random() * 2).toString() // Generates a single random binary digit
-  );
-
-export default function BinaryColumn({
+const BinaryCarousel: React.FC<Props> = ({
   direction = "up",
-  delay = 300,
-  columnCount = 12,
-}: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  height = 300,
+  speed = 10000,
+  repeatCount = 10,
+}) => {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const binaryString = "10011010101";
+  const binaryLines = Array.from({ length: repeatCount }, () =>
+    binaryString.split("")
+  ).flat();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (containerRef.current) {
-        const container = containerRef.current;
-        if (direction === "up") {
-          const firstChild = container.children[0];
-          container.appendChild(firstChild);
-        } else {
-          const lastChild = container.children[container.children.length - 1];
-          container.insertBefore(lastChild, container.children[0]);
-        }
-      }
-    }, delay);
+    const track = trackRef.current;
+    if (!track) return;
 
-    return () => clearInterval(interval);
-  }, [direction, delay]);
+    const section = track.querySelector(".binary-section") as HTMLElement;
+    if (!section) return;
+
+    const sectionHeight = section.clientHeight;
+    const clone = section.cloneNode(true) as HTMLElement;
+    clone.classList.add("binary-section-clone");
+
+    if (direction === "up") {
+      track.appendChild(clone);
+    } else {
+      track.insertBefore(clone, track.firstChild); // 👈 important fix
+    }
+
+    const animation = track.animate(
+      direction === "up"
+        ? [
+            { transform: "translateY(0)" },
+            { transform: `translateY(-${sectionHeight}px)` },
+          ]
+        : [
+            { transform: `translateY(-${sectionHeight}px)` },
+            { transform: "translateY(0)" },
+          ],
+      {
+        duration: speed,
+        iterations: Infinity,
+        easing: "linear",
+      }
+    );
+
+    return () => animation.cancel();
+  }, [direction, speed]);
 
   return (
-    <div className="h-64 w-8 overflow-hidden text-cyan-400 font-mono text-sm">
-      <div
-        ref={containerRef}
-        className="flex flex-col items-center transition-all duration-500 ease-in-out"
-        aria-live="polite" // Accessibility improvement
-      >
-        {generateBinaryLines(columnCount).map((line, idx) => (
-          <div key={idx} className="font-bold" style={{color:"#35FEFE", opacity:0.5}}>
-            {line}
-          </div>
-        ))}
+    <div
+      className="overflow-hidden w-6 font-lato"
+      style={{ height, fontSize:14 }}
+    >
+      <div ref={trackRef} className="flex flex-col items-center">
+        <div className="binary-section flex flex-col items-center">
+          {binaryLines.map((bit, idx) => (
+            <div key={idx} className="" style={{color:"#35FFFF"}}>
+              {bit}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default BinaryCarousel;

@@ -20,16 +20,17 @@ export const WebDev: React.FC = () => {
       marginTop: "100px",
       marginLeft:30,
       overflow:"hidden",
-      border:"none",
+      
       // backgroundImage: `linear-gradient(135deg, #35FEFE, #2554CB, #3737B2, #35FEFE)`,
-      background: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 20.82%, rgba(55, 55, 178, 0) 77.86%, #35FEFE 99.46%)`,
+      background: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
+      // backgroundImage: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 36.82%, rgba(55, 55, 178, 0) 57.86%, #35FEFE 99.46%)`,
     }}
 
     onHoverStart={() => setIsHovered(true)} // Set hover state
     onHoverEnd={() => setIsHovered(false)} // Reset hover state
     transition={{ duration: 0.5 }}
   >
-    
+
     <motion.div
       className="absolute flex-auto justify-center content-center text-white z-[1]  rounded-xl inset-0.5 text-left"
       style={{
@@ -55,13 +56,13 @@ export const WebDev: React.FC = () => {
     
 
       }}>
-      <motion.h3 className=" font-bold  " style={{fontSize:40}}
+      <motion.h3 className=" font-bold  " style={{fontSize:isHovered? 38:40}}
       animate={{y:isHovered ? -40 : 0}}
       transition={{type:"spring", stiffness:100, damping:20, duration:2}}>
 
         Mobile, Web App Development & Game
         </motion.h3>
-        <motion.p style={{fontSize:isHovered ? 17 : 18}}
+        <motion.p style={{fontSize:isHovered ? 18 : 22}}
         animate={{y:isHovered?-40:0}}
         transition={{type:"spring", stiffness:100, damping:20}}
         >
@@ -75,7 +76,7 @@ export const WebDev: React.FC = () => {
           <motion.div className=" space-x-5 "
           style={{top:10, right:-30}}
           initial={{y:50, opacity:0}}
-          animate={{y:0, opacity:1}}
+          animate={{y:-10, opacity:1}}
           transition={{type:"spring",stiffness:100, damping:20}}>
             <img src={bg_icon_png} alt=""  />
           </motion.div>
@@ -93,7 +94,7 @@ export const WebDev: React.FC = () => {
       }}>
         <GlowCircle size={200}/>
 
-        <div className="flex flex-row justify-center -space-x-3 "
+        <div className="flex flex-row justify-center -space-x-1 "
         style={{
             width:100, height:100,
             left:-80,
@@ -101,8 +102,11 @@ export const WebDev: React.FC = () => {
             position:"relative",
             
         }}>
-            <BinaryCarousel columnCount={8} delay={500}/>
-            <BinaryCarousel columnCount={5} delay={500}/>
+            {/* <BinaryCarousel columnCount={8} delay={500}/>
+            <BinaryCarousel columnCount={5} delay={500}/> */}
+
+            <BinaryCarousel direction="up" height={150} speed={90000} />
+            <BinaryCarousel direction="up" height={100} speed={90000} />
          
         </div>
         
@@ -123,12 +127,17 @@ export const WebDev: React.FC = () => {
         style={{
             width:100, height:100,
             right:-260,
-            bottom:100,
+            bottom:80,
             position:"relative",
             
             
         }}>
-            <BinaryCarousel columnCount={8} delay={500} direction="down"/>
+            {/* <BinaryCarousel columnCount={8} delay={500} direction="down"/> */}
+            {/* <BinaryCarousel direction="down" height={150} speed={90000} />
+            <BinaryCarousel direction="down" height={100} speed={90000} /> */}
+            <BinaryCarousel direction="down" height={150} speed={90000} />
+
+         
        
          
         </div>
@@ -136,13 +145,15 @@ export const WebDev: React.FC = () => {
         style={{
             width:100, height:100,
             right:-210,
-            bottom:40,
+            bottom:30,
             position:"relative",
             
             
         }}>
             
-            <BinaryCarousel columnCount={5} delay={500} direction="down"/>
+            {/* <BinaryCarousel columnCount={5} delay={500} direction="down"/> */}
+            <BinaryCarousel direction="down" height={100} speed={90000} />
+            
          
         </div>
         <GlowCircle size={200}/>
