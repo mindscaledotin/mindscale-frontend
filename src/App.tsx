@@ -1,11 +1,12 @@
 import Navbar from "./components/navbar";
+
 import StarParallax from "./components/StarParallax";
 // import { CardGrid } from "./components/CardGrid";
 import WebDev from "./components/cards/WebDev";
 // import DataAnalytics from "./components/cards/DataAnalytics";
 // import QACard from "./components/cards/QACard";
 // import UiUxCard from "./components/cards/UiUxCard";
-// import ContactForm from "./components/ContactForm";
+import ContactForm from "./components/ContactForm";
 import Footer from './components/Footer';
 
 
@@ -44,7 +45,8 @@ function App() {
       
       
       {/* <CardGrid/> */}
-      
+      <ContactForm />
+      <Footer />
       
 
     </div>
