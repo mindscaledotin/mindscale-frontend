@@ -1,6 +1,8 @@
 import Navbar from "./components/navbar";
 import StarParallax from "./components/StarParallax";
 import ContactForm from "./components/ContactForm";
+import Footer from './components/Footer';
+
 
 
 
@@ -25,6 +27,7 @@ function App() {
         ))}
       </div>
        <ContactForm />
+      <Footer />
 
     </div>
   );
