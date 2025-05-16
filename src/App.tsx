@@ -1,14 +1,27 @@
 import Navbar from "./components/navbar";
 import StarParallax from "./components/StarParallax";
-import HeroSection from "./components/HeroSection";
+// import { CardGrid } from "./components/CardGrid";
+import WebDev from "./components/cards/WebDev";
+// import DataAnalytics from "./components/cards/DataAnalytics";
+// import QACard from "./components/cards/QACard";
+// import UiUxCard from "./components/cards/UiUxCard";
+// import HeroSection from "./components/HeroSection";
+// import AiCard from "./components/cards/AiCard";
+
 
 function App() {
+   
   return (
     <div className="min-h-screen font-lato bg-[linear-gradient(252.82deg,_#000000_0%,_#06257F_120.75%)]">
       <Navbar />
       <StarParallax />
-      <HeroSection />
-      <div className="pt-20">
+      <WebDev/>
+      {/* <DataAnalytics/> */}
+      {/* <QACard/> */}
+      {/* <UiUxCard/> */}
+      {/* <AiCard/> */}
+
+      {/* <div className="pt-20">
         {[...Array(9)].map((_, index) => (
           <div key={index} className="m-4 p-8 bg-white/10 rounded-lg backdrop-blur-sm">
             <h2 className="text-2xl text-white mb-4">Section {index + 1}</h2>
@@ -18,7 +31,15 @@ function App() {
             </p>
           </div>
         ))}
-      </div>
+      </div>  
+      */}
+
+      
+      
+      {/* <CardGrid/> */}
+      
+      
+
     </div>
   );
 }
