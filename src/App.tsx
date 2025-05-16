@@ -1,5 +1,4 @@
 import Navbar from "./components/navbar";
-
 import StarParallax from "./components/StarParallax";
 // import { CardGrid } from "./components/CardGrid";
 import WebDev from "./components/cards/WebDev";
