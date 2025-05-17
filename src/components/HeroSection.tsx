@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "./button";
-import hero_section_cards from "../assets/hero_section_cards.svg";
+import hero_section_cards from "../assets/Hero_section_cards.svg";
 import hero_grid from "../assets/hero_grid.svg";
 
 import logo1 from "../assets/client_logo/logo1.png";

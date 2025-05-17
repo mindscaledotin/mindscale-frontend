@@ -1,10 +1,6 @@
 import Navbar from "./components/navbar";
 import StarParallax from "./components/StarParallax";
-// import { CardGrid } from "./components/CardGrid";
-import WebDev from "./components/cards/WebDev";
-// import DataAnalytics from "./components/cards/DataAnalytics";
-// import QACard from "./components/cards/QACard";
-// import UiUxCard from "./components/cards/UiUxCard";
+import { CardGrid } from "./components/CardGrid";
 import ContactForm from "./components/ContactForm";
 import Footer from './components/Footer';
 import { Element } from 'react-scroll';
@@ -38,9 +34,10 @@ function App() {
         </p>
       </div>
 
-      
-      <Element name="webdev" className="min-h-screen ">
-        <WebDev />
+
+      <Element name="webdev" className="min-h-screen mr-10 -ml-1">
+        
+        <CardGrid/>
       </Element>
 
       <TestimonialCarousel />
@@ -49,14 +46,7 @@ function App() {
         <ContactForm />
       </Element>
 
-      {/* <DataAnalytics/> */}
-      {/* <QACard/> */}
-      {/* <UiUxCard/> */}
-      {/* <AiCard/> */}
-
-      
-      
-      {/* <CardGrid/> */}
+     
 
       <Footer />
     </div>
