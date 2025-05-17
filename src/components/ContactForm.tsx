@@ -1,5 +1,6 @@
 import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
+
+import 'react-phone-input-2/lib/semantic-ui.css'
 import emailIcon from "../assets/icons/email.svg";
 import SendButton from "./SendButton";
 
@@ -8,11 +9,11 @@ function ContactForm() {
     <div>
       <div
         className="p-[1px] mx-2 md:mx-6 rounded-[12px]"
-        style={{ background: `linear-gradient(140.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`}}
+        style={{ background: `linear-gradient(140.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)` }}
       >
         <div className="rounded-[10px] bg-gradient-to-r from-[#052275] to-[#040A19] p-6 md:p-10">
           <div className="md:flex md:justify-between md:items-start gap-12">
-           
+
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h2 className="text-[22px] md:text-[30px] font-bold leading-snug mb-3 md:mb-5 whitespace-nowrap text-white">
                 Coffee? Code? Conversation?
@@ -29,12 +30,12 @@ function ContactForm() {
                   href="mailto:Business@mail.com"
                   className="text-blue-400 hover:underline text-sm md:text-[15px]"
                 >
-                  Business@mail.com
+                  info@mindscale.in
                 </a>
               </div>
             </div>
 
-           
+
             <div className="w-full md:w-1/2 text-base">
               <form className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4">
                 <input
@@ -52,29 +53,48 @@ function ContactForm() {
                   placeholder="Email"
                   className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
                 />
-                   {/* phone input here...... */}
-                {/* <PhoneInput
+                <div className='mt-4'>
+
+                <PhoneInput
                   country={'in'}
                   enableSearch
+                  disableSearchIcon
+                  placeholder="Phone Number"
                   inputProps={{
                     name: 'phone',
                     required: true,
+                    autoFocus: true,
                   }}
-                  containerClass="!w-full !border-b !border-gray-500 !pb-[2px]"
-                  inputClass="!w-full !bg-transparent !text-white !text-xs md:!text-sm !pl-14 !pr-2 !py-[12px] !border-none !placeholder:text-gray-400 !focus:outline-none !font-normal"
-                  buttonClass="!bg-transparent !border-none !text-white !text-xs md:!text-sm !pl-2 !font-normal"
                   dropdownStyle={{
-                    backgroundColor: '#0B1A3C',
-                    color: '#cbd5e1',
-                    fontWeight: '400',
+                    backgroundColor: 'white',
+                    color: 'black',
+                    zIndex:100
                   }}
                   searchStyle={{
-                    backgroundColor: '#0B1A3C',
-                    color: '#cbd5e1',
-                    border: '1px solid #334155',
-                    fontWeight: '400',
+                    backgroundColor: 'white',
+                    color: 'black',
                   }}
-                /> */}
+                  buttonStyle={{
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    padding: '0',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '100%',
+                  }}
+                  inputStyle={{
+                    width: '100%',
+                    backgroundColor: 'transparent',
+                    borderBottom: '1px solid #6B7280',
+                    color: 'white',
+                    fontSize: '0.75rem',
+                    padding: '12px 0 12px 50px',
+                  }}
+                  dropdownClass="custom-dropdown"
+                  autoFormat
+                />
+                </div>
 
                 <div className="col-span-2">
                   <label className="block mb-2 text-white">
@@ -121,15 +141,15 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;      
+export default ContactForm;
 
 
 
 
 
 
-  
 
 
-  
+
+
 
