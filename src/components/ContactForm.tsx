@@ -39,7 +39,8 @@ function ContactForm() {
         className="p-[1px] mx-2 md:mx-6 rounded-[12px]"
         style={{ background: `linear-gradient(140.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)` }}
       >
-        <div className="rounded-[10px] bg-gradient-to-r from-[#052275] to-[#040A19] p-6 md:p-10">
+        <div className="rounded-[10px] bg-gradient-to-r from-[#052275] to-[#040A19] p-6 md:p-10"
+        >
           <div className="md:flex md:justify-between md:items-start gap-12">
 
             <div className="md:w-1/2 mb-10 md:mb-0">
