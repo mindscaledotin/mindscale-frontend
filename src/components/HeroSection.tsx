@@ -108,26 +108,27 @@ const LogoCarousel: React.FC = () => {
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="hero-section relative min-h-[1093px] w-full flex flex-col items-center justify-center overflow-hidden pt-16" style={{ backgroundImage: `url(${hero_grid})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <div className="hero-section relative min-h-[1093px] w-full flex flex-col items-center justify-center overflow-hidden z-0" style={{ backgroundImage: `url(${hero_grid})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       {/* Main bracket border container */}
-      <div className="relative w-full max-w-[1774px] h-[706px] mx-auto md:border-x-2 md:rounded-[156px] overflow-hidden">
+      <div className="relative w-full max-w-[1774px] h-[706px] mx-auto md:border-x-2 md:rounded-[156px] overflow-hidden z-0">
         {/* Content container */}
-        <div className="relative w-full h-full px-6 lg:px-10 flex flex-col lg:flex-row items-center">
+        <div className="relative w-full h-full px-6 lg:px-10 flex flex-col lg:flex-row items-center z-0">
           {/* Left Content */}
-          <div className="hero-content text-white max-w-[700px] lg:max-w-[800px] z-20 lg:ml-12 mt-8 lg:mt-0 text-center lg:text-left relative">
+          <div className="hero-content text-white max-w-[700px] lg:max-w-[800px] lg:ml-12 mt-8 lg:mt-0 text-center lg:text-left relative z-0">
             <h1 className="text-4xl sm:text-5xl lg:text-[78px] font-[500] leading-[120%] mb-6 font-lato text-white">
               Smart Tech, Seamless Execution
             </h1>
             <p className="text-xl lg:text-[23px] text-gray-300 mb-8 pr-4 font-lato font-[400] leading-[120%]">
               We help you move faster with custom low-code solutions that scale effortlessly.
             </p>
-            <div className="w-[254px]">
-              <Button text="Let's connect" size="lg" className="w-full bg-gradient-to-r from-purple-700 to-purple-600 hover:from-purple-600 hover:to-purple-500" />
+            <div>
+            <Button text="let's Connect" width="378px" height="62px" />
+              {/* <Button text="Let's connect" size="lg" className="w-full bg-gradient-to-r from-purple-700 to-purple-600 hover:from-purple-600 hover:to-purple-500" /> */}
             </div>
           </div>
 
           {/* Right Graphic */}
-          <div className="hero-graphic lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 mt-12 lg:mt-0 z-10">
+          <div className="hero-graphic lg:absolute lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 mt-12 lg:mt-0 z-0">
             <img
               src={hero_section_cards}
               alt="Hero Graphic"
