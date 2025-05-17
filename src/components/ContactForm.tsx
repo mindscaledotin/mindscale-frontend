@@ -1,10 +1,38 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-input-2';
-
 import 'react-phone-input-2/lib/semantic-ui.css'
 import emailIcon from "../assets/icons/email.svg";
 import SendButton from "./SendButton";
 
 function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (formRef.current) {
+      // Debug: Log form data before sending
+      const formData = new FormData(formRef.current);
+      console.log(Object.fromEntries(formData.entries()));
+
+      emailjs.sendForm(
+        'service_mindscale',
+        'template_h6vtyct',
+        formRef.current,
+        { publicKey: 'LHy02rYiVmkXCmrm5' }
+      )
+        .then((result) => {
+          alert('Message sent successfully!');
+          formRef.current?.reset();
+        })
+        .catch((error) => {
+          console.error('Failed to send email:', error);
+          alert('Failed to send message. Please try again.');
+        });
+    }
+  };
+
   return (
     <div>
       <div
@@ -27,8 +55,8 @@ function ContactForm() {
               <div className="flex items-center gap-2 mt-4">
                 <img src={emailIcon} alt="email" className="w-5 h-5" />
                 <a
-                  href="mailto:Business@mail.com"
-                  className="text-blue-400 hover:underline text-sm md:text-[15px]"
+                  href="mailto:info@mindscale.in"
+                  className="text-blue-400 hover:underline text-base md:text-[15px]"
                 >
                   info@mindscale.in
                 </a>
@@ -37,63 +65,68 @@ function ContactForm() {
 
 
             <div className="w-full md:w-1/2 text-base">
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4">
+              <form 
+                ref={formRef} 
+                onSubmit={sendEmail}
+                className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4"
+              >
                 <input
                   type="text"
+                  name="first_name"
                   placeholder="First Name"
                   className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
                 />
                 <input
                   type="text"
+                  name="last_name"
                   placeholder="Last Name"
-                  className="border-b border-gray-500 bg-transparent py-[12px]  text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
+                  className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
                 />
                 <input
                   type="email"
+                  name="email_id"
                   placeholder="Email"
                   className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
                 />
-                <div className='mt-4'>
-
-                <PhoneInput
-                  country={'in'}
-                  enableSearch
-                  disableSearchIcon
-                  placeholder="Phone Number"
-                  inputProps={{
-                    name: 'phone',
-                    required: true,
-                    autoFocus: true,
-                  }}
-                  dropdownStyle={{
-                    backgroundColor: 'white',
-                    color: 'black',
-                    zIndex:100
-                  }}
-                  searchStyle={{
-                    backgroundColor: 'white',
-                    color: 'black',
-                  }}
-                  buttonStyle={{
-                    backgroundColor: 'transparent',
-                    border: 'none',
-                    padding: '0',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    height: '100%',
-                  }}
-                  inputStyle={{
-                    width: '100%',
-                    backgroundColor: 'transparent',
-                    borderBottom: '1px solid #6B7280',
-                    color: 'white',
-                    fontSize: '0.75rem',
-                    padding: '12px 0 12px 50px',
-                  }}
-                  dropdownClass="custom-dropdown"
-                  autoFormat
-                />
+                <div className="mt-4">
+                  <PhoneInput
+                    country={'in'}
+                    enableSearch
+                    disableSearchIcon
+                    placeholder="Phone Number"
+                    inputProps={{
+                      name: 'phone',
+                      required: true,
+                    }}
+                    dropdownStyle={{
+                      backgroundColor: 'white',
+                      color: 'black',
+                      zIndex:100
+                    }}
+                    searchStyle={{
+                      backgroundColor: 'white',
+                      color: 'black',
+                    }}
+                    buttonStyle={{
+                      backgroundColor: 'transparent',
+                      border: 'none',
+                      padding: '0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      height: '100%',
+                    }}
+                    inputStyle={{
+                      width: '100%',
+                      backgroundColor: 'transparent',
+                      borderBottom: '1px solid #6B7280',
+                      color: 'white',
+                      fontSize: '0.75rem',
+                      padding: '12px 0 12px 50px',
+                    }}
+                    dropdownClass="custom-dropdown"
+                    autoFormat
+                  />
                 </div>
 
                 <div className="col-span-2">
@@ -123,9 +156,10 @@ function ContactForm() {
                 <div className="col-span-2">
                   <label className="block mb-2 text-white">Message</label>
                   <textarea
+                    name="message"
                     placeholder="Write your message..."
                     rows={2}
-                    className="border-b border-gray-500 bg-transparent  text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full  md:text-sm flex items-center"
+                    className="border-b border-gray-500 bg-transparent text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full md:text-sm flex items-center"
                   />
                 </div>
 
