@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import GlowCircle from "../GlowCircle";
+// import GlowCircle from "../GlowCircle";
 
 
 import Bg from "../../assets/QACard/bg.svg";
