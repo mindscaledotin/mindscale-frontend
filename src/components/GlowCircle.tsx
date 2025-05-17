@@ -1,5 +1,5 @@
 import React from "react";
-import glow from "../assets/WebDevCard/glow.svg"
+// import glow from "../assets/WebDevCard/glow.svg"
 
 interface GlowCircleProps {
   size: number; // Size prop to define the diameter of the circle
