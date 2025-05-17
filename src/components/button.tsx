@@ -4,10 +4,12 @@ import React from "react";
 type Size = "sm" | "md" | "lg";
 
 interface ButtonProps {
-  text: string;
+  text: React.ReactNode;
   onClick?: () => void;
   size?: Size;
   className?: string;
+  width?: string;
+  height?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -15,6 +17,8 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   size = "md",
   className = "",
+  width,
+  height,
 }) => {
   let sizeClass = "";
 
@@ -23,12 +27,18 @@ export const Button: React.FC<ButtonProps> = ({
   else sizeClass = "px-6 py-3 text-base";
 
   const combinedClassName = `
-    relative font-lato  font-semibold rounded overflow-hidden 
-    transition-all duration-300 
-    border border-[#FFFFFF3B]
+    relative font-lato font-semibold rounded overflow-hidden 
+    transition-all duration-300 ease-in-out
+    border border-[#FFFFFF94]
+    group
     ${!className ? sizeClass : ""}
     ${className}
   `;
+
+  const buttonStyle = {
+    width: width || "auto",
+    height: height || "auto",
+  };
 
   return (
     <motion.button
@@ -37,28 +47,24 @@ export const Button: React.FC<ButtonProps> = ({
       whileHover="hover"
       animate="rest"
       className={combinedClassName}
+      style={buttonStyle}
       variants={{
         rest: {
-          background:
-            "linear-gradient(266.26deg, #000000 6.32%, #7B2CFF 40.4%, #7B2CFF 61.06%, #000000 92.69%)",
+          background: "linear-gradient(262.6deg, #000000 11.85%, #4A0EAC 34.73%, #4A0EAC 64.29%, #000000 98.68%)",
           color: "#ffffff",
+          borderColor: "rgba(255, 255, 255, 0.5)",
         },
         hover: {
-            background: "linear-gradient(263.29deg, #000000 5.44%, #06257F 51.1%, #000000 91.73%, #06257F 117.25%)",
-
+          background: "linear-gradient(263.29deg, #000000 5.44%, #06257F 51.1%, #000000 91.73%, #06257F 117.25%)",
+          borderColor: "rgba(255, 255, 255, 0.23)",
         },
       }}
     >
-      <span className="relative z-10">{text}</span>
-
-      <motion.span
-        className="absolute bottom-0 left-1/2 h-0.5 bg-white z-0"
-        variants={{
-          rest: { width: "0%", x: "-50%" },
-          hover: { width: "100%", x: "-50%" },
-        }}
-        transition={{ duration: 0.4 }}
-      />
+      <span 
+        className="relative z-10 inline-block transition-all duration-300 ease-in-out group-hover:after:opacity-100 after:opacity-0 after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-[-1px] after:h-[1px] after:bg-white after:transition-all after:duration-300 after:ease-in-out"
+      >
+        {text}
+      </span>
     </motion.button>
   );
 };
