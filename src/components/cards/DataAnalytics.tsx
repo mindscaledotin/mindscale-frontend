@@ -10,14 +10,14 @@ export const DataAnalytics: React.FC = () => {
     const [isHovered, setIsHovered] = useState(false);
     return (
         <motion.div
-            className="absolute rounded-xl shadow-lg"
+            className="box-border p-6 w-full aspect-[693/468] relative rounded-xl shadow-lg"
             style={{
-                width: 688,
-                height: 368,
-                marginTop: "100px",
+                // width: 588,
+                // height: 368,
+                // marginTop: "100px",
                 marginLeft: 30,
                 overflow: "hidden",
-                background: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
+                background: `linear-gradient(140.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
             }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
