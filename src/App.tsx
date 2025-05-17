@@ -35,7 +35,7 @@ function App() {
       </div>
 
 
-      <Element name="webdev" className="justify-center content-center text-center">
+      <Element name="webdev" className="min-h-screen mr-10 -ml-1">
         
         <CardGrid/>
       </Element>
