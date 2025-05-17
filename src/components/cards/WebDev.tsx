@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import BinaryCarousel from "./BinaryCarousel";
 import GlowCircle from "../GlowCircle";
 
-import BG from "../../assets/webDevCard/BG.svg";
+import bgSvg from "../../assets/webDevCard/BG.svg";
 import BG2 from "../../assets/WebDevCard/BG2.svg";
 
 import bg_icon_png from "../../assets/WebDevCard/BG_icon.png"
@@ -38,8 +38,8 @@ export const WebDev: React.FC = () => {
         
         
             backgroundImage: isHovered
-          ? `url(${BG}), linear-gradient(121.07deg, #19188B,#000000)` // Change to the second background image on hover
-          : `url(${BG}),url(${BG2}), linear-gradient(121.07deg, #19188B,#000000)`,
+          ? `url(${bgSvg}), linear-gradient(121.07deg, #19188B,#000000)` // Change to the second background image on hover
+          : `url(${bgSvg}),url(${BG2}), linear-gradient(121.07deg, #19188B,#000000)`,
         
           backgroundSize:"cover",
           backgroundPosition:"center",
