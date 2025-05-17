@@ -48,7 +48,7 @@ const TestimonialCarousel: React.FC = () => {
     // eslint-disable-next-line
   }, [index]);
 
-  const t = testimonials[index];
+  // const t = testimonials[index];
 
   // Animation classes
   const [animating, setAnimating] = useState(false);

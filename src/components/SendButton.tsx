@@ -22,7 +22,7 @@ const SendButton: React.FC<SendButtonProps> = ({ text, onClick }) => {
         hover: {
           background:
             
-            "linear-gradient(266.26deg, #000000 6.32%, #7B2CFF 40.4%, #7B2CFF 61.06%, #000000 92.69%)",
+            "linear-gradient(266.26deg, #000000 6.32%, #06257F 40.4%, #06257F 61.06%, #000000 92.69%)",
 
         },
       }}

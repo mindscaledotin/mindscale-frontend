@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import mindscaleLogo from '../assets/mindscale_logo.svg';
 import { Button } from './button';
 
