@@ -13,7 +13,7 @@ export const WebDev: React.FC = () => {
     const [isHovered, setIsHovered] = useState(false); // State to track hover
     return(
   <motion.div
-    className="box-border w-full aspect-[988/468] relative rounded-xl p-6 shadow-lg "
+    className="box-border w-full max-w-[988] aspect-[988/468] relative rounded-xl p-6 shadow-lg "
     style={{
       // width: 688,
       // height: 368,
@@ -43,6 +43,7 @@ export const WebDev: React.FC = () => {
         
           backgroundSize:"cover",
           backgroundPosition:"center",
+          backgroundRepeat:"no-repeat"
         }}
         >
             {/* Card Text Div */}
@@ -93,7 +94,7 @@ export const WebDev: React.FC = () => {
         top:-50,
         left:-50
       }}>
-        <GlowCircle size={200}/>
+        <GlowCircle size={300}/>
 
         <div className="flex flex-row justify-center -space-x-1 "
         style={{
@@ -157,7 +158,7 @@ export const WebDev: React.FC = () => {
             
          
         </div>
-        <GlowCircle size={200}/>
+        <GlowCircle size={250}/>
         
       </div>
        

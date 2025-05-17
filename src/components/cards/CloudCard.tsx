@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import Bg from "../../assets/CloudCard/bg.svg"; // Adjust the background image path
 import icon from "../../assets/CloudCard/onHover_BG.svg"; // Adjust the background image path
-// import icon from "../../assets/CloudCard/icon.png"; // Adjust the icon path
+import dots from "../../assets/CloudCard/Cloud solution dot svg.svg"
 
 export const CloudCard: React.FC = () => {
     
@@ -28,7 +28,7 @@ export const CloudCard: React.FC = () => {
                 className="absolute flex-auto justify-center content-center text-white z-[1] rounded-xl inset-0.5 text-left"
                 style={{
                     backgroundImage: isHovered
-                        ? `linear-gradient(121.07deg, #19188B,#000000)`
+                        ? `url(${dots}),linear-gradient(121.07deg, #19188B,#000000)`
                         : `url(${Bg}), linear-gradient(121.07deg, #19188B,#000000)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",

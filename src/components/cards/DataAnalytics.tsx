@@ -29,8 +29,9 @@ export const DataAnalytics: React.FC = () => {
                     backgroundImage: isHovered
                         ? `url(${Bg2}), linear-gradient(121.07deg, #19188B,#000000)`
                         : `url(${Bg}), linear-gradient(121.07deg, #19188B,#000000)`,
-                    // backgroundSize: "cover",
-                    // backgroundPosition: "center",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat:"no-repeat"
                 }}
             >
                 <div className="px-2 mx-10" style={{

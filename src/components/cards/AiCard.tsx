@@ -6,6 +6,7 @@ import Bg2 from "../../assets/AICard/onHover_glow.svg"; // Adjust the background
 import icon from "../../assets/AICard/icon.png"; // Adjust the icon path
 import icon1 from "../../assets/AICard/left_ckt.png"; // Adjust the left corner icon path
 import icon2 from "../../assets/AICard/right_ckt.png"; // Adjust the right corner icon path
+import dots from "../../assets/AICard/AI dots.svg"
 
 export const AiCard: React.FC = () => {
     
@@ -62,7 +63,9 @@ export const AiCard: React.FC = () => {
 
                     {isHovered && (
                         <motion.div className="space-x-5"
-                            style={{  position:"absolute",top: 100, right: 102 }}
+                            style={{  position:"absolute",top: 100, right: 102,
+                                backgroundImage:`url(${dots})`
+                             }}
                             initial={{ y: 50, opacity: 0 }}
                             animate={{ y: -90, opacity: 1 }}
                             exit={{ y: 50, opacity:0}}
