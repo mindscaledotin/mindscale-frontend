@@ -22,7 +22,7 @@ function ContactForm() {
         formRef.current,
         { publicKey: 'LHy02rYiVmkXCmrm5' }
       )
-        .then((result) => {
+        .then(() => {
           alert('Message sent successfully!');
           formRef.current?.reset();
         })
