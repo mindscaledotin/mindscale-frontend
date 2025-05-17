@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import GlowCircle from "../GlowCircle";
+// import GlowCircle from "../GlowCircle";
 
 
 import Bg from "../../assets/QACard/bg.svg";
@@ -18,7 +18,11 @@ export const QACard: React.FC = () => {
     return(
   <motion.div
     className=" box-border w-full aspect-[850/468] p-6 relative rounded-xl shadow-lg"
+    
     style={{
+    //   width: 638,
+    //   height: 368,
+    //   marginTop: "100px",
     //   width: 638,
     //   height: 368,
     //   marginTop: "100px",
@@ -85,7 +89,9 @@ export const QACard: React.FC = () => {
           animate={{y:0, opacity:1}}
           transition={{type:"spring",stiffness:100, damping:20}}>
             {/* <GlowCircle size={300}/> */}
+            {/* <GlowCircle size={300}/> */}
             <img src={bg_icon} alt=""  />
+            
             
           </motion.div>
         )}
