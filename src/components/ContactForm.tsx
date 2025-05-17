@@ -17,10 +17,10 @@ function ContactForm() {
               <h2 className="text-[22px] md:text-[30px] font-bold leading-snug mb-3 md:mb-5 whitespace-nowrap text-white">
                 Coffee? Code? Conversation?
               </h2>
-              <p className="text-gray-300 text-[13px] md:text-[14px] leading-relaxed mb-2">
+              <p className="text-gray-300 text-base md:text-xl leading-relaxed mb-2">
                 Whatever you're looking for — solutions, support, or a simple chat —
               </p>
-              <p className="text-gray-300 text-[13px] md:text-[14px] leading-relaxed mb-2">
+              <p className="text-gray-300 text-base md:text-xl leading-relaxed mb-2">
                 we're here and eager to connect.
               </p>
               <div className="flex items-center gap-2 mt-4">
@@ -105,7 +105,7 @@ function ContactForm() {
                   <textarea
                     placeholder="Write your message..."
                     rows={2}
-                    className="border-b border-gray-500 bg-transparent py-2 text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full  md:text-sm"
+                    className="border-b border-gray-500 bg-transparent  text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full  md:text-sm flex items-center"
                   />
                 </div>
 
