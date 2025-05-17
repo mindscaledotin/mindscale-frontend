@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import BinaryCarousel from "./BinaryCarousel";
 import GlowCircle from "../GlowCircle";
 
-import bgSvg from "../../assets/webDevCard/BG.svg";
+import bgSvg from "../../assets/WebDevCard/BG.svg";
 import BG2 from "../../assets/WebDevCard/BG2.svg";
 
 import bg_icon_png from "../../assets/WebDevCard/BG_icon.png"
