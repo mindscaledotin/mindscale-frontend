@@ -9,7 +9,7 @@ const testimonials = [
     name: "Aarav Mehta",
     role: "Product Manager at Nexora"
   },
-  // Add more testimonials as needed
+  
   {
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     quote: "Exceptional service and support throughout.",
