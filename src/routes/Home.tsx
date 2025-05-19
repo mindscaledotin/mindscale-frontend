@@ -39,10 +39,10 @@ const Home = () => {
         <CardGrid />
       </Element>
 
-       <Element name="testimonials" id="testimonials">
+       {/* <Element name="testimonials" id="testimonials">
 
            <TestimonialCarousel />
-        </Element>
+        </Element> */}
       
       <Element name="about" id="about" >
         <TeamCards />
