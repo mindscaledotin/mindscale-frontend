@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import BinaryCarousel from "./BinaryCarousel";
 import GlowCircle from "../GlowCircle";
 
-import Bg from "../../assets/webDevCard/BG.svg";
-import Bg2 from "../../assets/WebDevCard/BG2.svg";
+import bgSvg from "../../assets/WebDevCard/BG.svg";
+import BG2 from "../../assets/WebDevCard/BG2.svg";
 
 import bg_icon_png from "../../assets/WebDevCard/BG_icon.png"
 
@@ -38,8 +38,8 @@ export const WebDev: React.FC = () => {
         
         
             backgroundImage: isHovered
-          ? `url(${Bg}), linear-gradient(121.07deg, #19188B,#000000)` // Change to the second background image on hover
-          : `url(${Bg}),url(${Bg2}), linear-gradient(121.07deg, #19188B,#000000)`,
+          ? `url(${bgSvg}), linear-gradient(121.07deg, #19188B,#000000)` // Change to the second background image on hover
+          : `url(${bgSvg}),url(${BG2}), linear-gradient(121.07deg, #19188B,#000000)`,
         
           backgroundSize:"cover",
           backgroundPosition:"center",
@@ -52,20 +52,21 @@ export const WebDev: React.FC = () => {
         justifyContent:"center",
         textAlign:"left",
         alignContent:"center",
-        padding:20,
-        height:300,
+        padding:"4%",
+        // margin:"4%",
+        height:"100%",
         
     
 
       }}>
       <motion.h3 className=" font-bold  " style={{fontSize:isHovered? 38:40}}
-      animate={{y:isHovered ? -40 : 0}}
+      animate={{y:isHovered ? -20 : 0}}
       transition={{type:"spring", stiffness:100, damping:20, duration:2}}>
 
         Mobile, Web App Development & Game
         </motion.h3>
         <motion.p style={{fontSize:isHovered ? 18 : 22}}
-        animate={{y:isHovered?-40:0}}
+        animate={{y:isHovered?-20:0}}
         transition={{type:"spring", stiffness:100, damping:20}}
         >
             Empowering your ideas into seamless mobile and web
@@ -76,9 +77,9 @@ export const WebDev: React.FC = () => {
         {/* Images displayed on hover */}
         {isHovered && (
           <motion.div className=" space-x-5 "
-          style={{top:10, right:-30}}
+          style={{top:"10%", right:"40%"}}
           initial={{y:50, opacity:0}}
-          animate={{y:-10, opacity:1}}
+          animate={{y:"10%", opacity:1}}
           transition={{type:"spring",stiffness:100, damping:20}}>
             <img src={bg_icon_png} alt=""  />
           </motion.div>

@@ -6,11 +6,17 @@ import Footer from './components/Footer';
 import { Element } from 'react-scroll';
 import HeroSection from "./components/HeroSection";
 import TestimonialCarousel from "./components/TestimonialCarousel";
+// import MaintenancePage from "./components/MaintenancePage";
+
+
 import TeamCards from "./components/TeamCards"
 // import AiCard from "./components/cards/AiCard";
 import GlowCircleNew from "./components/GlowCircleNew";
 
 function App() {
+
+    // return <MaintenancePage />;
+
    
   return (
     <>
