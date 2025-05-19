@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import BinaryCarousel from "./BinaryCarousel";
-import GlowCircle from "../GlowCircle";
+import BinaryCarousel from "@components/cards/BinaryCarousel";
+import GlowCircle from "@components/GlowCircle";
 
-import bgSvg from "../../assets/WebDevCard/BG.svg";
-import BG2 from "../../assets/WebDevCard/BG2.svg";
+import bgSvg from "@assets/WebDevCard/BG.svg";
+import BG2 from "@assets/WebDevCard/BG2.svg";
 
-import bg_icon_png from "../../assets/WebDevCard/BG_icon.png"
+import bg_icon_png from "@assets/WebDevCard/BG_icon.png"
 
 export const WebDev: React.FC = () => {
     

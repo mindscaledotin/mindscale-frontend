@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import Bg from "../../assets/DACard/BG.svg";
-import Bg2 from "../../assets/DACard/onHover_BG.svg";
-import icon from "../../assets/DACard/icon.png";
+import Bg from "@assets/DACard/BG.svg";
+import Bg2 from "@assets/DACard/onHover_BG.svg";
+import icon from "@assets/DACard/icon.png";
 
 export const DataAnalytics: React.FC = () => {
     

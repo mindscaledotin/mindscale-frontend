@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import VioletSparkles from "../assets/Violet_Sparkles.svg";
+import VioletSparkles from "@assets/Violet_Sparkles.svg";
 
 const TeamCards = () => {
   const [isHovered, setIsHovered] = useState(false);
