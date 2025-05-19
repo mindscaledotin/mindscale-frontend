@@ -4,6 +4,10 @@ import { Link as RouterLink, NavLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
 import mindscaleLogo from "../assets/mindscale_logo.svg";
 import { Button } from "./button";
+import { Link as RouterLink, NavLink, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
+import mindscaleLogo from "../assets/mindscale_logo.svg";
+import { Button } from "./button";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,7 +61,7 @@ const Navbar: React.FC = () => {
                 </a>
               )}
             </li>
-            <li className="hidden md:block">
+            {/* <li className="hidden md:block">
               {location.pathname === '/' ? (
                 <ScrollLink 
                   to="contact"
@@ -81,7 +85,7 @@ const Navbar: React.FC = () => {
                   Customer Success
                 </a>
               )}
-            </li>
+            </li> */}
             <li className="hidden md:block">
               <NavLink 
                 to="/blogs" 
