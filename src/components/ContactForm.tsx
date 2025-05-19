@@ -161,7 +161,6 @@ function ContactForm() {
                     placeholder="Write your message..."
                     rows={2}
                     className="border-b border-gray-500 bg-transparent text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full md:text-sm flex items-center"
-                    className="border-b border-gray-500 bg-transparent  text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full  md:text-sm flex items-center"
                   />
                 </div>
 
@@ -177,7 +176,7 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+
 export default ContactForm;
 
 

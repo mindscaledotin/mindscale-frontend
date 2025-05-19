@@ -6,11 +6,17 @@ import Footer from './components/Footer';
 import { Element } from 'react-scroll';
 import HeroSection from "./components/HeroSection";
 import TestimonialCarousel from "./components/TestimonialCarousel";
+// import MaintenancePage from "./components/MaintenancePage";
+
+
 
 // import AiCard from "./components/cards/AiCard";
 
 
 function App() {
+
+    // return <MaintenancePage />;
+
    
   return (
     <>
@@ -18,6 +24,7 @@ function App() {
       <Navbar />
       <StarParallax />
       <HeroSection/>
+     
       <div className="mx-auto flex flex-col items-center gap-8 w-[90vw] max-w-[1729px] min-h-[380px] mt-12">
         <h1
           className="font-lato font-bold text-[6vw] md:text-[120px] leading-tight text-center bg-gradient-to-r from-[#35FEFE] to-white/75 bg-clip-text text-transparent px-4 py-2"
