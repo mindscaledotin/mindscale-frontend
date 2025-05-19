@@ -1,15 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import { Button } from "./button";
-import hero_section_cards from "../assets/Hero_section_cards.svg";
-import hero_grid from "../assets/hero_grid.svg";
+import { Button } from "@components/button";
+import hero_section_cards from "@assets/Hero_section_cards.svg";
+import hero_grid from "@assets/hero_grid.svg";
 
-
-import nSpire from "../assets/client_logo/nSpire.png";
-import mukti from "../assets/client_logo/mukti.png";
-import smart_geology from "../assets/client_logo/smart_geology.png";
-import Tritzo from "../assets/client_logo/Tritzo.png";
-import vikramshila from "../assets/client_logo/vikramshila.png";
-import LotusBleu from "../assets/client_logo/LotusBleu.png";
+import nSpire from "@assets/client_logo/nSpire.png";
+import mukti from "@assets/client_logo/mukti.png";
+import smart_geology from "@assets/client_logo/smart_geology.png";
+import Tritzo from "@assets/client_logo/Tritzo.png";
+import vikramshila from "@assets/client_logo/vikramshila.png";
+import LotusBleu from "@assets/client_logo/LotusBleu.png";
 
 // Client logos array
 const clientLogos = [

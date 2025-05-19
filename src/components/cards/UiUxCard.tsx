@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import Bg from "../../assets/UIUXCard/bg.svg"; // Adjust the background image path
-import Bg2 from "../../assets/UIUXCard/bg2.svg"; // Adjust the background image path
-import icon from "../../assets/UIUXCard/icon.png"; // Adjust the icon path
+import Bg from "@assets/UIUXCard/bg.svg"; // Adjust the background image path
+import Bg2 from "@assets/UIUXCard/bg2.svg"; // Adjust the background image path
+import icon from "@assets/UIUXCard/icon.png"; // Adjust the icon path
 
 export const UiUxCard: React.FC = () => {
     

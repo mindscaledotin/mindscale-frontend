@@ -2,8 +2,8 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/semantic-ui.css'
-import emailIcon from "../assets/icons/email.svg";
-import SendButton from "./SendButton";
+import emailIcon from "@assets/icons/email.svg";
+import SendButton from "@components/SendButton";
 
 function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import Bg from "../../assets/AICard/bg.svg"; // Adjust the background image path
-import Bg2 from "../../assets/AICard/onHover_glow.svg"; // Adjust the background image path
-import icon from "../../assets/AICard/icon.png"; // Adjust the icon path
-import icon1 from "../../assets/AICard/left_ckt.png"; // Adjust the left corner icon path
-import icon2 from "../../assets/AICard/right_ckt.png"; // Adjust the right corner icon path
-import dots from "../../assets/AICard/AI dots.svg"
+import Bg from "@assets/AICard/bg.svg"; // Adjust the background image path
+import Bg2 from "@assets/AICard/onHover_glow.svg"; // Adjust the background image path
+import icon from "@assets/AICard/icon.png"; // Adjust the icon path
+import icon1 from "@assets/AICard/left_ckt.png"; // Adjust the left corner icon path
+import icon2 from "@assets/AICard/right_ckt.png"; // Adjust the right corner icon path
+import dots from "@assets/AICard/AI dots.svg"
 
 export const AiCard: React.FC = () => {
     
