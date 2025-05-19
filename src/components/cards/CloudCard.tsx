@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import Bg from "../../assets/CloudCard/bg.svg"; // Adjust the background image path
-import icon from "../../assets/CloudCard/onHover_bg.svg";
+import icon from "../../assets/CloudCard/onHover_BG.svg"; // Adjust the background image path
 import dots from "../../assets/CloudCard/Cloud solution dot svg.svg"
 
 export const CloudCard: React.FC = () => {
@@ -18,7 +18,7 @@ export const CloudCard: React.FC = () => {
                 marginLeft: 30,
                 overflow: "hidden",
                 background: `linear-gradient(140.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
-                aspectRatio:688/468
+                // aspectRatio:688/468
             }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
