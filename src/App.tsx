@@ -9,9 +9,9 @@ import TestimonialCarousel from "./components/TestimonialCarousel";
 // import MaintenancePage from "./components/MaintenancePage";
 
 
-
+import TeamCards from "./components/TeamCards"
 // import AiCard from "./components/cards/AiCard";
-
+import GlowCircleNew from "./components/GlowCircleNew";
 
 function App() {
 
@@ -23,9 +23,13 @@ function App() {
     <div className="min-h-screen font-lato bg-[linear-gradient(252.82deg,_#000000_0%,_#06257F_120.75%)]">
       <Navbar />
       <StarParallax />
+            {/* 🟣 Add Glow in Background */}
+      <GlowCircleNew
+        className="top-[660px] left-[-159px] z-100"
+      />
+
       <HeroSection/>
-     
-      <div className="mx-auto flex flex-col items-center gap-8 w-[90vw] max-w-[1729px] min-h-[380px] mt-12">
+      <div className="mx-auto flex flex-col items-center  w-[90vw] max-w-[1729px] min-h-[380px] mt-12">
         <h1
           className="font-lato font-bold text-[6vw] md:text-[120px] leading-tight text-center bg-gradient-to-r from-[#35FEFE] to-white/75 bg-clip-text text-transparent px-4 py-2"
           style={{
@@ -49,11 +53,13 @@ function App() {
 
       <TestimonialCarousel />
       
+      <TeamCards/>
+      
       <Element name="contact" className="m-10 ">
         <ContactForm />
       </Element>
 
-     
+    
 
       <Footer />
     </div>
