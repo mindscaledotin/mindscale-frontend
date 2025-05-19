@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+// import GlowCircle from "../GlowCircle";
 
 
 import Bg from "../../assets/QACard/bg.svg";
@@ -16,24 +17,23 @@ export const QACard: React.FC = () => {
     const [isHovered, setIsHovered] = useState(false); // State to track hover
     return(
   <motion.div
-    className="absolute rounded-xl shadow-lg"
+    className=" box-border w-full aspect-[850/468] p-6 relative rounded-xl shadow-lg"
     style={{
-      width: 688,
-      height: 368,
-      marginTop: "100px",
+    //   width: 638,
+    //   height: 368,
+    //   marginTop: "100px",
       marginLeft:30,
       overflow:"hidden",
       
       // backgroundImage: `linear-gradient(135deg, #35FEFE, #2554CB, #3737B2, #35FEFE)`,
     //   background: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
-      backgroundImage: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 85%, #35FEFE 100%)`,
+      backgroundImage: `linear-gradient(140.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
     }}
 
     onHoverStart={() => setIsHovered(true)} // Set hover state
     onHoverEnd={() => setIsHovered(false)} // Reset hover state
     transition={{ duration: 0.5 }}
   >
-
     <motion.div
       className="absolute flex-auto justify-center content-center text-white z-[1]  rounded-xl inset-0.5 text-left"
       style={{
@@ -47,6 +47,7 @@ export const QACard: React.FC = () => {
           backgroundPosition:"center",
         }}
         >
+
             {/* Card Text Div */}
       <div className="px-2 mx-10 z-10" style={{
         // width:600,
@@ -83,7 +84,9 @@ export const QACard: React.FC = () => {
           initial={{y:50, opacity:0}}
           animate={{y:0, opacity:1}}
           transition={{type:"spring",stiffness:100, damping:20}}>
+            {/* <GlowCircle size={300}/> */}
             <img src={bg_icon} alt=""  />
+            
           </motion.div>
         )}
 

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import BinaryCarousel from "./BinaryCarousel";
 import GlowCircle from "../GlowCircle";
 
-import Bg from "../../assets/webDevCard/BG.svg";
-import Bg2 from "../../assets/WebDevCard/BG2.svg";
+import bgSvg from "../../assets/WebDevCard/BG.svg";
+import BG2 from "../../assets/WebDevCard/BG2.svg";
 
 import bg_icon_png from "../../assets/WebDevCard/BG_icon.png"
 
@@ -13,16 +13,17 @@ export const WebDev: React.FC = () => {
     const [isHovered, setIsHovered] = useState(false); // State to track hover
     return(
   <motion.div
-    className="absolute rounded-xl shadow-lg"
+    className="box-border w-full max-w-[988] aspect-[988/468] relative rounded-xl p-6 shadow-lg "
     style={{
-      width: 688,
-      height: 368,
-      marginTop: "100px",
+      // width: 688,
+      // height: 368,
+      // marginTop: "100px",
       marginLeft:30,
       overflow:"hidden",
       
       // backgroundImage: `linear-gradient(135deg, #35FEFE, #2554CB, #3737B2, #35FEFE)`,
-      background: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
+      // background: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
+      background: `linear-gradient(140.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
       // backgroundImage: `linear-gradient(121.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 36.82%, rgba(55, 55, 178, 0) 57.86%, #35FEFE 99.46%)`,
     }}
 
@@ -37,11 +38,12 @@ export const WebDev: React.FC = () => {
         
         
             backgroundImage: isHovered
-          ? `url(${Bg}), linear-gradient(121.07deg, #19188B,#000000)` // Change to the second background image on hover
-          : `url(${Bg}),url(${Bg2}), linear-gradient(121.07deg, #19188B,#000000)`,
+          ? `url(${bgSvg}), linear-gradient(121.07deg, #19188B,#000000)` // Change to the second background image on hover
+          : `url(${bgSvg}),url(${BG2}), linear-gradient(121.07deg, #19188B,#000000)`,
         
           backgroundSize:"cover",
           backgroundPosition:"center",
+          backgroundRepeat:"no-repeat"
         }}
         >
             {/* Card Text Div */}
@@ -92,7 +94,7 @@ export const WebDev: React.FC = () => {
         top:-50,
         left:-50
       }}>
-        <GlowCircle size={200}/>
+        <GlowCircle size={300}/>
 
         <div className="flex flex-row justify-center -space-x-1 "
         style={{
@@ -156,7 +158,7 @@ export const WebDev: React.FC = () => {
             
          
         </div>
-        <GlowCircle size={200}/>
+        <GlowCircle size={250}/>
         
       </div>
        
