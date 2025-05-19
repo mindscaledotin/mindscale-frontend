@@ -52,20 +52,21 @@ export const WebDev: React.FC = () => {
         justifyContent:"center",
         textAlign:"left",
         alignContent:"center",
-        padding:20,
-        height:300,
+        padding:"4%",
+        // margin:"4%",
+        height:"100%",
         
     
 
       }}>
       <motion.h3 className=" font-bold  " style={{fontSize:isHovered? 38:40}}
-      animate={{y:isHovered ? -40 : 0}}
+      animate={{y:isHovered ? -20 : 0}}
       transition={{type:"spring", stiffness:100, damping:20, duration:2}}>
 
         Mobile, Web App Development & Game
         </motion.h3>
         <motion.p style={{fontSize:isHovered ? 18 : 22}}
-        animate={{y:isHovered?-40:0}}
+        animate={{y:isHovered?-20:0}}
         transition={{type:"spring", stiffness:100, damping:20}}
         >
             Empowering your ideas into seamless mobile and web
@@ -76,9 +77,9 @@ export const WebDev: React.FC = () => {
         {/* Images displayed on hover */}
         {isHovered && (
           <motion.div className=" space-x-5 "
-          style={{top:10, right:-30}}
+          style={{top:"10%", right:"40%"}}
           initial={{y:50, opacity:0}}
-          animate={{y:-10, opacity:1}}
+          animate={{y:"10%", opacity:1}}
           transition={{type:"spring",stiffness:100, damping:20}}>
             <img src={bg_icon_png} alt=""  />
           </motion.div>
