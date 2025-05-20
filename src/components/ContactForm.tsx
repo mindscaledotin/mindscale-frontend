@@ -2,7 +2,10 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/semantic-ui.css'
-import emailIcon from "@assets/icons/email.svg";
+import { Mail } from "lucide-react";
+
+
+
 import SendButton from "@components/SendButton";
 
 function ContactForm() {
@@ -14,8 +17,9 @@ function ContactForm() {
     if (formRef.current) {
       // Debug: Log form data before sending
       const formData = new FormData(formRef.current);
-      console.log(Object.fromEntries(formData.entries()));
+      // console.log(Object.fromEntries(formData.entries()));
 
+      
       emailjs.sendForm(
         'service_mindscale',
         'template_h6vtyct',
@@ -44,24 +48,66 @@ function ContactForm() {
           <div className="md:flex md:justify-between md:items-start gap-12">
 
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <h2 className="text-[22px] md:text-[30px] font-bold leading-snug mb-3 md:mb-5 whitespace-nowrap text-white">
+              <h2 className="text-[25px] md:text-[34px] font-bold leading-snug mb-3 md:mb-5 whitespace-nowrap text-white">
                 Coffee? Code? Conversation?
               </h2>
-              <p className="text-gray-300 text-base md:text-xl leading-relaxed mb-2">
+              {/* <p className="text-gray-300 text-base md:text-xl leading-relaxed mb-2">
                 Whatever you're looking for — solutions, support, or a simple chat —
               </p>
               <p className="text-gray-300 text-base md:text-xl leading-relaxed mb-2">
                 we're here and eager to connect.
+              </p> */}
+
+
+              <p className="text-gray-300 text-[13px] md:text-[17px] leading-relaxed mb-2">
+                Whatever you're looking for — solutions, support, or a simple chat —
               </p>
+              <p className="text-gray-300 text-[13px] md:text-[17px] leading-relaxed mb-2">
+                we're here and eager to connect.
+              </p>
+
+{/* 
               <div className="flex items-center gap-2 mt-4">
                 <img src={emailIcon} alt="email" className="w-5 h-5" />
                 <a
                   href="mailto:info@mindscale.in"
-                  className="text-blue-400 hover:underline text-base md:text-[15px]"
+                  className="text-blue-400 hover:underline text-base md:text-[17.5px]"
                 >
                   info@mindscale.in
                 </a>
-              </div>
+              </div> */}
+
+
+
+
+
+            {/* <div className="flex items-center gap-2 mt-4">
+  <TbMailFilled className="text-blue-400 w-5 h-5" />
+  <a
+    href="mailto:info@mindscale.in"
+    className="text-blue-400 hover:underline text-base md:text-[17.5px]"
+  >
+    info@mindscale.in
+  </a>
+</div> */}
+
+
+
+<div className="flex items-center gap-2 mt-4">
+  <Mail className="w-5 h-5 text-blue-400" />
+  <a
+    href="mailto:info@mindscale.in"
+    className="text-blue-400 hover:underline text-base md:text-[17.5px]"
+  >
+    info@mindscale.in
+  </a>
+</div>
+
+
+
+
+
+
             </div>
 
 
@@ -75,19 +121,28 @@ function ContactForm() {
                   type="text"
                   name="first_name"
                   placeholder="First Name"
-                  className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
+                  required
+                  className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-[12px] md:text-[13px] focus:outline-none focus:border-blue-500" // UPDATED
+
+
                 />
                 <input
                   type="text"
                   name="last_name"
                   placeholder="Last Name"
-                  className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
+                  required
+                  
+
+                  className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-[12px] md:text-[13px] focus:outline-none focus:border-blue-500" // UPDATED.....
                 />
                 <input
                   type="email"
                   name="email_id"
                   placeholder="Email"
-                  className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
+                  required  
+                  className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-[12px] md:text-[13px] focus:outline-none focus:border-blue-500" // UPDATED......
+
+
                 />
                 <div className="mt-4">
                   <PhoneInput
@@ -125,16 +180,22 @@ function ContactForm() {
                       fontSize: '0.75rem',
                       padding: '12px 0 12px 50px',
                     }}
+
+
+
+
+
+                    
                     dropdownClass="custom-dropdown"
                     autoFormat
                   />
                 </div>
 
                 <div className="col-span-2">
-                  <label className="block mb-2 text-white">
-                    Select Subject (Optional)
+                  <label className="block mb-2 text-white text-[12.5px]">
+                    Select Subject ? (Optional)
                   </label>
-                  <div className="flex flex-wrap gap-6 items-center text-white">
+                  <div className="flex flex-wrap gap-6 items-center text-white text-[12.5px] ">
                     {[
                       "General Inquiry",
                       "Brand Identity",
@@ -155,12 +216,15 @@ function ContactForm() {
                 </div>
 
                 <div className="col-span-2">
-                  <label className="block mb-2 text-white">Message</label>
+                  <label className="block mb-2 text-white text-[12.5px]">Message</label>
                   <textarea
                     name="message"
                     placeholder="Write your message..."
                     rows={2}
-                    className="border-b border-gray-500 bg-transparent text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full md:text-sm flex items-center"
+                    required
+                    // className="border-b border-gray-500 bg-transparent text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full md:text-sm flex items-center"
+                    className="border-b border-gray-500 bg-transparent text-white placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500 w-full text-[10px]" // UPDATED
+
                   />
                 </div>
 
@@ -178,9 +242,6 @@ function ContactForm() {
 
 
 export default ContactForm;
-
-
-
 
 
 
