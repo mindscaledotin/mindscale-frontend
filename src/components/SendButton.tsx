@@ -13,7 +13,12 @@ const SendButton: React.FC<SendButtonProps> = ({ text, onClick }) => {
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className="relative px-24 py-2.5 font-lato font-semibold text-white text-base md:text-lg rounded border border-white/25 overflow-hidden transition-all duration-300"
+      // className="relative px-24 py-2.5 font-light font-semibold text-white text-base md:text-lg rounded border border-white/25 overflow-hidden transition-all duration-300"
+      className="relative px-24 py-2.5 font-lato font-medium text-white text-sm md:text-base rounded border border-white/25 overflow-hidden transition-all duration-300"
+
+
+
+
       variants={{
         rest: {
           background:
