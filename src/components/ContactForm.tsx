@@ -16,7 +16,7 @@ function ContactForm() {
 
     if (formRef.current) {
       // Debug: Log form data before sending
-      const formData = new FormData(formRef.current);
+      new FormData(formRef.current);
       // console.log(Object.fromEntries(formData.entries()));
 
       
