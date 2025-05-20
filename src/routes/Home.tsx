@@ -3,7 +3,7 @@ import { CardGrid } from "@components/CardGrid";
 import ContactForm from "@components/ContactForm";
 import { Element } from 'react-scroll';
 import HeroSection from "@components/HeroSection";
-import TestimonialCarousel from "@components/TestimonialCarousel";
+// import TestimonialCarousel from "@components/TestimonialCarousel";
 import TeamCards from "@components/TeamCards";
 import GlowCircleNew from "@components/GlowCircleNew";
 
