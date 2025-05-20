@@ -1,9 +1,9 @@
 import React from "react";
-import youtube from "../assets/icons/youtube.svg";
-import twitter from "../assets/icons/twitter.svg";
-import linkedin from "../assets/icons/linkedin.svg";
-import instagram from "../assets/icons/instagram.svg";
-import facebook from "../assets/icons/facebook.svg";
+import youtube from "@assets/icons/youtube.svg";
+import twitter from "@assets/icons/twitter.svg";
+import linkedin from "@assets/icons/linkedin.svg";
+import instagram from "@assets/icons/instagram.svg";
+import facebook from "@assets/icons/facebook.svg";
 
 
 const Footer : React.FC = () => {

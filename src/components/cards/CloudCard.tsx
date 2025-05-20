@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import Bg from "../../assets/CloudCard/bg.svg"; // Adjust the background image path
-import icon from "../../assets/CloudCard/onHover_BG.svg"; // Adjust the background image path
-import dots from "../../assets/CloudCard/Cloud solution dot svg.svg"
+import Bg from "@assets/CloudCard/bg.svg"; // Adjust the background image path
+import icon from "@assets/CloudCard/onHover_bg.svg"; // Adjust the background image path
+import dots from "@assets/CloudCard/Cloud solution dot svg.svg"
 
 export const CloudCard: React.FC = () => {
     

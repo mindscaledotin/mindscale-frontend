@@ -1,10 +1,10 @@
 import React from "react";
-import WebDev from "./cards/WebDev";
-import DataAnalytics from "./cards/DataAnalytics";
-import QACard from "./cards/QACard";
-import UiUxCard from "./cards/UiUxCard";
-import CloudCard from "./cards/CloudCard";
-import AiCard from "./cards/AiCard";
+import WebDev from "@components/cards/WebDev";
+import DataAnalytics from "@components/cards/DataAnalytics";
+import QACard from "@components/cards/QACard";
+import UiUxCard from "@components/cards/UiUxCard";
+import CloudCard from "@components/cards/CloudCard";
+import AiCard from "@components/cards/AiCard";
 
 export const CardGrid: React.FC = () => {
   return (
