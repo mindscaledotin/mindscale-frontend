@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-// import GlowCircle from "../GlowCircle";
+import GlowCircle from "../GlowCircle";
 
 
 import Bg from "../../assets/QACard/bg.svg";
@@ -21,12 +21,12 @@ export const QACard: React.FC = () => {
     
     style={{
     //   width: 638,
-    //   height: 368,
+      // height: 468,
     //   marginTop: "100px",
     //   width: 638,
     //   height: 368,
     //   marginTop: "100px",
-      marginLeft:30,
+      // marginLeft:30,
       overflow:"hidden",
       
       // backgroundImage: `linear-gradient(135deg, #35FEFE, #2554CB, #3737B2, #35FEFE)`,
@@ -39,7 +39,7 @@ export const QACard: React.FC = () => {
     transition={{ duration: 0.5 }}
   >
     <motion.div
-      className="absolute flex-auto justify-center content-center text-white z-[1]  rounded-xl inset-0.5 text-left"
+      className="absolute flex-auto justify-center content-center text-white z-[1]  rounded-xl inset-0.5 text-left hover:cursor-pointer"
       style={{
         
             background:`linear-gradient(121.07deg, #19188B,#000000)`,
@@ -49,17 +49,18 @@ export const QACard: React.FC = () => {
         
           backgroundSize:"cover",
           backgroundPosition:"center",
+          backgroundRepeat:"no-repeat"
         }}
         >
 
             {/* Card Text Div */}
-      <div className="px-2 mx-10 z-10" style={{
+      <div className="px-10 mx-10" style={{
         // width:600,
         justifyContent:"center",
         textAlign:"left",
         alignContent:"center",
-        padding:20,
-        height:300,
+        padding:"5%",
+        height:"auto",
         backgroundImage:`url(${Bg2})`
 
     
@@ -67,13 +68,21 @@ export const QACard: React.FC = () => {
     
 
       }}>
-      <motion.h3 className=" font-bold  " style={{fontSize:isHovered? 38:40}}
+      <motion.h3 
+        className={`font-bold mb-4 ${isHovered ? 'text-xl md:text-3xl lg:text-4xl -mx-10' : 'text-base md:text-4xl lg:text-5xl'}`}
+
+
+      // className=" font-bold  " style={{fontSize:isHovered? 38:40}}
       animate={{y:isHovered ? -40 : 0}}
       transition={{type:"spring", stiffness:100, damping:20, duration:2}}>
 
         Testing & Quality Assurance
         </motion.h3>
-        <motion.p style={{fontSize:isHovered ? 18 : 22}}
+        <motion.p
+          className={` ${isHovered ? 'text-m md:text-l lg:text-2xl -mx-10' : 'text-sm md:text-xl lg:text-2xl'}`}
+
+        
+        // style={{fontSize:isHovered ? 18 : 22}}
         animate={{y:isHovered?-40:0}}
         transition={{type:"spring", stiffness:100, damping:20}}
         >
@@ -89,8 +98,8 @@ export const QACard: React.FC = () => {
           animate={{y:0, opacity:1}}
           transition={{type:"spring",stiffness:100, damping:20}}>
             {/* <GlowCircle size={300}/> */}
-            {/* <GlowCircle size={300}/> */}
             <img src={bg_icon} alt=""  />
+            {/* <GlowCircle size={300}/> */}
             
             
           </motion.div>

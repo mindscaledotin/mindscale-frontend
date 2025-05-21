@@ -18,7 +18,7 @@ export const AiCard: React.FC = () => {
                 // width: 688,
                 // height: 468,
                 // marginTop: "100px",
-                marginLeft: 30,
+                // marginLeft: 30,
                 overflow: "hidden",
                 backgroundImage: `linear-gradient(140.35deg, #35FEFE 0%, rgba(37, 84, 204, 0) 18.82%, rgba(55, 55, 178, 0) 80.86%, #35FEFE 100%)`,
             }}
@@ -27,7 +27,7 @@ export const AiCard: React.FC = () => {
             transition={{ duration: 0.5 }}
         >
             <motion.div
-                className="absolute flex-auto justify-center content-center text-white z-[1] rounded-xl inset-0.5 text-center"
+                className="absolute flex-auto justify-center content-center text-white z-[1] rounded-xl inset-0.5 text-center hover:cursor-pointer"
                 style={{
                     background: `linear-gradient(121.07deg, #19188B,#000000)`,
                     backgroundImage: isHovered
@@ -35,26 +35,35 @@ export const AiCard: React.FC = () => {
                         : `url(${Bg}),linear-gradient(121.07deg, #19188B,#000000)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
+                    backgroundRepeat:'no-repeat'
                 }}
             >
-                <div className="px-2 mx-10 z-10" style={{
+                <div className="px-10 mx-10" style={{
                     justifyContent: "center",
                     textAlign: "left",
                     alignContent: "center",
                     padding: 20,
-                    height: 300,
+                    height: "auto",
                     position:"absolute",
-                    top:85,
-                    left:isHovered?-200:-10,
+                    top:180,
+                    left:isHovered?-220:50,
                     marginLeft:220
                     
                 }}>
-                    <motion.h3 className="font-bold" style={{ fontSize: isHovered ? 38 : 40 , textAlign:isHovered?"center":"left"}}
+                    <motion.h3 
+                    className={`font-bold mb-4 ${isHovered ? 'text-xl md:text-3xl lg:text-4xl text-center' : 'text-base md:text-4xl lg:text-5xl text-left'}`}
+
+
+                    // className="font-bold" style={{ fontSize: isHovered ? 38 : 40 , textAlign:isHovered?"center":"left"}}
                         animate={{ y: isHovered ? -160 : 0 }}
                         transition={{ type: "spring", stiffness: 100, damping: 20, duration: 2 }}>
                         AI & Automation
                     </motion.h3>
-                    <motion.p style={{ fontSize: isHovered ? 18 : 22 ,textAlign:isHovered?"center":"left"}}
+                    <motion.p 
+                        className={` ${isHovered ? 'text-m md:text-l lg:text-2xl text-center' : 'text-sm md:text-xl lg:text-2xl text-left'}`}
+
+
+                    // style={{ fontSize: isHovered ? 18 : 22 ,textAlign:isHovered?"center":"left"}}
                         animate={{ y: isHovered ? -160 : 0 }}
                         transition={{ type: "spring", stiffness: 100, damping: 20 }}>
                        Automate your processes and supercharge innovation with AI.
@@ -63,14 +72,14 @@ export const AiCard: React.FC = () => {
 
                     {isHovered && (
                         <motion.div className="space-x-5"
-                            style={{  position:"absolute",top: 100, right: 102,
+                            style={{  position:"absolute",top: "30%", right: "20%",
                                 backgroundImage:`url(${dots})`
                              }}
                             initial={{ y: 50, opacity: 0 }}
                             animate={{ y: -90, opacity: 1 }}
                             exit={{ y: 50, opacity:0}}
                             transition={{ type: "spring", stiffness: 100, damping: 20 }}>
-                            <img src={icon} alt="" style={{width:"400px", height:"320.65px"}} />
+                            <img src={icon} alt="" style={{width:"100%", height:"100%"}} />
                         </motion.div>
                     )}
                 </div>

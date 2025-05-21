@@ -8,7 +8,8 @@ import AiCard from "@components/cards/AiCard";
 
 export const CardGrid: React.FC = () => {
   return (
-    <div className="mx-auto px-[38px] py-[38px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[26px]">
+    <div className="mx-auto px-[32px]  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[26px]">
+
       <div className="col-span-12 md:col-span-7"><WebDev /></div> {/* 988x468 */}
       <div className="col-span-12 md:col-span-5"><DataAnalytics /></div> {/* 693x468 */}
       <div className="col-span-12 md:col-span-6"><QACard /></div> {/* 850x468 */}

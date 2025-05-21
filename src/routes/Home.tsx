@@ -3,7 +3,7 @@ import { CardGrid } from "@components/CardGrid";
 import ContactForm from "@components/ContactForm";
 import { Element } from 'react-scroll';
 import HeroSection from "@components/HeroSection";
-import TestimonialCarousel from "@components/TestimonialCarousel";
+// import TestimonialCarousel from "@components/TestimonialCarousel";
 import TeamCards from "@components/TeamCards";
 import GlowCircleNew from "@components/GlowCircleNew";
 
@@ -20,7 +20,7 @@ const Home = () => {
 
       <HeroSection />
 
-      <Element name="webdev" id="webdev" className="min-h-screen mr-10 -ml-1">
+      <Element name="webdev" id="webdev" className="m-10">
       <div className="mx-auto flex flex-col items-center w-[90vw] max-w-[1729px] min-h-[380px] mt-12">
         <h1
           className="font-lato font-bold text-[6vw] md:text-[120px] leading-tight text-center bg-gradient-to-r from-[#35FEFE] to-white/75 bg-clip-text text-transparent px-4 py-2"

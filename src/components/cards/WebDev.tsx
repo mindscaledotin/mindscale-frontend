@@ -13,12 +13,12 @@ export const WebDev: React.FC = () => {
     const [isHovered, setIsHovered] = useState(false); // State to track hover
     return(
   <motion.div
-    className="box-border w-full max-w-[988] aspect-[988/468] relative rounded-xl p-6 shadow-lg "
+    className="box-border w-full  aspect-[988/468] relative rounded-xl p-6 shadow-lg hover:cursor-pointer "
     style={{
       // width: 688,
       // height: 368,
       // marginTop: "100px",
-      marginLeft:30,
+      // marginLeft:30,
       overflow:"hidden",
       
       // backgroundImage: `linear-gradient(135deg, #35FEFE, #2554CB, #3737B2, #35FEFE)`,
@@ -33,7 +33,7 @@ export const WebDev: React.FC = () => {
   >
 
     <motion.div
-      className="absolute flex-auto justify-center content-center text-white z-[1]  rounded-xl inset-0.5 text-left"
+      className="absolute flex-auto justify-center content-center text-white z-[1]  rounded-xl inset-0.5 text-left hover:cursor-pointer"
       style={{
         
         
@@ -47,26 +47,35 @@ export const WebDev: React.FC = () => {
         }}
         >
             {/* Card Text Div */}
-      <div className="px-2 mx-10" style={{
+      <div className="px-10 mx-10" style={{
         // width:600,
         justifyContent:"center",
         textAlign:"left",
         alignContent:"center",
-        padding:"4%",
+        padding:"5%",
         // margin:"4%",
         height:"100%",
         
     
 
       }}>
-      <motion.h3 className=" font-bold  " style={{fontSize:isHovered? 38:40}}
-      animate={{y:isHovered ? -20 : 0}}
+      <motion.h3 
+          className={`font-bold mb-4 ${isHovered ? 'text-xl md:text-3xl lg:text-4xl -mx-5' : 'text-base md:text-4xl lg:text-5xl'}`}
+
+
+      // className=" font-bold" 
+      // style={{fontSize:isHovered? 38:40}}
+      animate={{y:isHovered ? -50 : 0}}
       transition={{type:"spring", stiffness:100, damping:20, duration:2}}>
 
         Mobile, Web App Development & Game
         </motion.h3>
-        <motion.p style={{fontSize:isHovered ? 18 : 22}}
-        animate={{y:isHovered?-20:0}}
+        <motion.p 
+          className={` ${isHovered ? 'text-m md:text-l lg:text-2xl -mx-5' : 'text-sm md:text-xl lg:text-2xl'}`}
+
+        
+        // style={{fontSize:isHovered ? 18 : 22}}
+        animate={{y:isHovered?-50:0}}
         transition={{type:"spring", stiffness:100, damping:20}}
         >
             Empowering your ideas into seamless mobile and web
