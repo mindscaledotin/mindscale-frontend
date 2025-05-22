@@ -81,6 +81,7 @@ function ContactForm() {
                   type="text"
                   name="last_name"
                   placeholder="Last Name"
+                  required = {true}
                   className="border-b border-gray-500 bg-transparent py-[12px] text-white placeholder:text-gray-400 text-xs md:text-sm focus:outline-none focus:border-blue-500"
                 />
                 <input

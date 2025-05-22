@@ -2,8 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link as RouterLink, NavLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
-import mindscaleLogo from "../assets/mindscale_logo.svg";
-import { Button } from "./button";
+import mindscaleLogo from "@assets/mindscale_logo.svg";
+import { Button } from "@components/button";  
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
     <nav className="fixed h-[116px] flex w-full z-50 transition-all duration-300 backdrop-blur-[8px] shadow-lg">
       <div className="w-full px-6 sm:px-16 font-lato flex justify-between items-center relative z-10">
         <RouterLink to="/">
-          <img src={mindscaleLogo} alt="logo" className="h-10" />
+          <img src={mindscaleLogo} alt="logo" className="h-12" />
         </RouterLink>
         <div className="hidden lg:flex gap-10 items-center">
           <ul className="hidden lg:flex gap-10 items-center">
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 </a>
               )}
             </li>
-            <li className="hidden md:block">
+            {/* <li className="hidden md:block">
               {location.pathname === '/' ? (
                 <ScrollLink 
                   to="contact"
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
                   Customer Success
                 </a>
               )}
-            </li>
+            </li> */}
             <li className="hidden md:block">
               <NavLink 
                 to="/blogs" 
