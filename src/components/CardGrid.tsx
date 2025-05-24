@@ -8,13 +8,20 @@ import AiCard from "@components/cards/AiCard";
 
 export const CardGrid: React.FC = () => {
   return (
-    <div className="mx-auto px-[38px] py-[38px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[26px]">
-      <div className="col-span-12 md:col-span-7"><WebDev /></div> {/* 988x468 */}
-      <div className="col-span-12 md:col-span-5"><DataAnalytics /></div> {/* 693x468 */}
-      <div className="col-span-12 md:col-span-6"><QACard /></div> {/* 850x468 */}
-      <div className="col-span-12 md:col-span-6"><UiUxCard /></div> {/* 833x468 */}
-      <div className="col-span-12 md:col-span-6"><CloudCard /></div> {/* 795x588 */}
-      <div className="col-span-12 md:col-span-6"><AiCard /></div> {/* 888x588 */}
+    <div className=" flex flex-col justify-center">
+
+      <div className="flex flex-col sm:flex-row w-full justify-center items-center my-5 gap-4 lg:gap-8">
+        <WebDev />  {/**988x468 */}
+        <DataAnalytics />{/* 693x468 */}
+      </div>
+      <div className="flex flex-col sm:flex-row w-full justify-center my-5 gap-4 lg:gap-8">
+        <QACard /> {/* 850x468 */}
+        <UiUxCard />{/* 833x468 */}
+      </div>
+      <div className="flex flex-col sm:flex-row w-full justify-center my-5 gap-4 lg:gap-8">
+        <CloudCard /> {/* 795x588 */}
+        <AiCard /> {/* 888x588 */}
+      </div>
     </div>
   );
 };

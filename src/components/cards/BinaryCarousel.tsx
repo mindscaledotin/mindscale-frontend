@@ -58,8 +58,8 @@ const BinaryCarousel: React.FC<Props> = ({
 
   return (
     <div
-      className="overflow-hidden w-6 font-lato"
-      style={{ height, fontSize:14 }}
+      className="overflow-hidden w-6 font-lato text-lg"
+      style={{ height }}
     >
       <div ref={trackRef} className="flex flex-col items-center">
         <div className="binary-section flex flex-col items-center">
