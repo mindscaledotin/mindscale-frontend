@@ -176,51 +176,6 @@ const AiCard = () => {
                   className="w-11/12 h-11/12" 
                 />
               </motion.div>
-  
-              {/* Enhanced Top-right glow */}
-              {/* <motion.div
-                className="absolute top-0 right-0 rounded-xl overflow-hidden"
-                initial={{ opacity: 0.8 }}
-                animate={{
-                  opacity: isHovered ? 0:1,
-                  filter: isHovered ? "brightness(1.5) contrast(120%)" : "brightness(1) contrast(100%)"
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <img
-                  src={glow}
-                  alt="glow"
-                  className="w-[200%] h-[200%] top-0 right-0 mix-blend-screen"
-                  style={{
-                    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-                    transform: 'rotateY(180deg) ',
-                  }}
-                />
-              </motion.div> */}
-  
-              
-  
-              {/* Enhanced Bottom-left glow */}
-              {/* <motion.div
-                className="absolute bottom-0 left-0 rounded-xl overflow-hidden"
-                initial={{ opacity: 0.8 }}
-                animate={{
-                  opacity: isHovered ? 0: 1,
-                  filter: isHovered ? "brightness(1.5) contrast(120%)" : "brightness(1) contrast(100%)"
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <img
-                  src={glow}
-                  alt="glow"
-                  className="w-[200%] h-[200%] bottom-0 left-0 mix-blend-screen"
-                  style={{
-                    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-                    transform: 'rotateX(180deg) ',
-                  }}
-                />
-              </motion.div>
-   */}
               <motion.div
                 className="absolute bottom-0 right-0 z-10 transform rotate-180"
                 initial={{ opacity: 1 }}
