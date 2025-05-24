@@ -5,6 +5,7 @@ import GlowCircle from "@components/GlowCircle";
 
 import bgSvg from "@assets/WebDevCard/BG.svg";
 import BG2 from "@assets/WebDevCard/BG2.svg";
+import glow from "@assets/WebDevCard/glow.avif"
 
 import bg_icon_png from "@assets/WebDevCard/BG_icon.png"
 import { div } from "framer-motion/client";
@@ -201,30 +202,97 @@ import { div } from "framer-motion/client";
 
 
 const WebDev = () => {
-
   return (
-    <div className=" w-3/5  border border-red-500 p-5 h-full">
-      <div className="flex flex-col h-full rounded-xl shadow-xl justify-center text-left px-20" style={{
-        backgroundImage: ` url(${bgSvg}),url(${BG2}), linear-gradient(121.07deg, #19188B,#000000)`
+    <div className="max-w-[61.75rem] h-[25rem] md:h-[29.25rem] p-4 relative group">
+      <div className="flex flex-col h-full rounded-xl shadow-xl justify-center text-left p-6 md:p-10" style={{
+        backgroundColor: "rgb(12, 12, 48)",
+        backgroundImage: `url(${bgSvg}), url(${BG2})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}>
+        {/* Top-left glow */}
+        <div className="absolute top-4 left-4 rounded-xl">
+          <img
+            src={glow}
+            alt="glow"
+            className="w-[200%] h-[200%] top-0 left-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300
+                      filter brightness-300 contrast-100
+                      mix-blend-screen rounded-xl"
+          />
+        </div>
 
-        <p className=" text-xl md:text-6xl text-white font-bold">
-          Mobile, Web App Development & Game
-        </p>
+        {/* Top-left BinaryCarousels */}
+        <div className="absolute top-4 left-4 z-10 flex gap-2 mx-4">
+          <BinaryCarousel direction="up" height={150} speed={90000} />
+          <BinaryCarousel direction="up" height={80} speed={90000} />
+        </div>
 
-        <p className=" text-base md:text-3xl text-white  my-10">
-          Empowering your ideas into seamless mobile and 
-          web applications.
-          Delivering intuitive, fast, and scalable apps for every platform.
-        </p>
+        {/* Bottom-right glow */}
+        <div className="absolute bottom-4 right-4 rounded-xl overflow-hidden">
+          <img
+            src={glow}
+            alt="glow"
+            className="w-[200%] h-[200%] -bottom-1/2 -right-1/2 opacity-80 group-hover:opacity-100 transition-opacity duration-300
+                      filter brightness-300 contrast-100
+                      mix-blend-screen rounded-xl transform rotate-180"
+          />
+        </div>
 
+        {/* Bottom-right BinaryCarousels */}
+        <div className="absolute bottom-4 right-4 z-10 flex gap-2 mx-4">
+          <BinaryCarousel direction="down" height={150} speed={90000} />
+          <BinaryCarousel direction="down" height={80} speed={90000} />
+        </div>
+
+        {/* Content with hover effects */}
+        <div className="flex flex-col justify-center text-left mx-10 relative h-full">
+          {/* Text Container */}
+          <motion.div
+            className="relative z-20"
+            initial={false}
+            animate={{
+              y: 0,
+              fontSize: "100%"
+            }}
+            whileHover={{
+              y: -40,
+              fontSize: "90%"
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            <p className="text-xl md:text-4xl lg:text-5xl text-white font-bold">
+              Mobile, Web App Development & Game
+            </p>
+            <p className="text-base md:text-xl lg:text-2xl text-white my-4 md:my-6">
+              Empowering your ideas into seamless mobile and
+              web applications.
+              Delivering intuitive, fast, and scalable apps for every platform.
+            </p>
+          </motion.div>
+
+          {/* Image (hidden by default, shown on hover) */}
+          <motion.div
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileHover={{ 
+              opacity: 1,
+              scale: 1,
+              transition: { delay: 0.1 } // Slight delay for better staging
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            <img 
+              src={bg_icon_png} 
+              alt="icon" 
+              className="w-40 h-40 object-contain"
+            />
+          </motion.div>
+        </div>
       </div>
     </div>
-  )
-
-
-
-}
+  );
+};
 
 
 export default WebDev;
