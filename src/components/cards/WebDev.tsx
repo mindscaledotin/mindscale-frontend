@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import BinaryCarousel from "@components/cards/BinaryCarousel";
 import bgSvg from "@assets/WebDevCard/BG.svg";
-import BG2 from "@assets/WebDevCard/BG2.svg";
+import BG2 from "@assets/WebDevCard/BG2.avif";
 import glow from "@assets/WebDevCard/glow.avif"
 import bg_icon_png from "@assets/WebDevCard/BG_icon.png"
 
@@ -20,12 +20,13 @@ const WebDev = () => {
     const tiltY = (0.5 - x) * 10; // Tilt more if hovered toward left/right
 
     setHoverDirection({ x: tiltX, y: tiltY });
-    setIsHovered(true);
+    // Only set hover state if screen is larger than sm (640px)
+    setIsHovered(window.innerWidth > 640);
   };
 
   return (
     <motion.div
-      className="max-w-[61.75rem] h-[22rem] md:h-[29.25rem] mx-4 relative"
+      className="max-w-[61.75rem] h-[22rem] md:h-[29.25rem] mx-6 md:mx-4 relative"
       style={{ perspective: "1200px" }}
     >
       <motion.div
@@ -41,7 +42,7 @@ const WebDev = () => {
           }
         }}
         onMouseMove={handleHover}
-        onMouseEnter={() => setIsHovered(true)}
+        onMouseEnter={() => setIsHovered(window.innerWidth > 640)}
         onMouseLeave={() => {
           setIsHovered(false);
           setHoverDirection({ x: 0, y: 0 });
@@ -49,7 +50,7 @@ const WebDev = () => {
       >
         <div className="w-full h-full rounded-xl bg-[#0A113C]">
           <div
-            className="flex flex-col h-full rounded-xl shadow-sm justify-center text-left p-6 md:p-10 relative"
+            className="flex flex-col h-full rounded-xl shadow-sm justify-center text-left p-6 md:p-8 lg:p-10 relative"
             style={{
               backgroundImage: `url(${bgSvg}), url(${BG2})`,
               backgroundSize: "cover",
@@ -75,8 +76,8 @@ const WebDev = () => {
               />
             </motion.div>
 
-            {/* Top-left BinaryCarousels */}
-            <div className="absolute top-4 left-4 z-10 flex gap-2 mx-4 md:visible invisible">
+            {/* Top-left BinaryCarousels (hidden in tablet view) */}
+            <div className="absolute top-4 left-4 z-10 flex gap-2 mx-4 lg:visible invisible">
               <BinaryCarousel direction="up" height={150} speed={90000} />
               <BinaryCarousel direction="up" height={80} speed={90000} />
             </div>
@@ -98,14 +99,14 @@ const WebDev = () => {
               />
             </motion.div>
 
-            {/* Bottom-right BinaryCarousels */}
-            <div className="absolute bottom-4 right-4 z-10 flex gap-2 mx-4 md:visible invisible">
+            {/* Bottom-right BinaryCarousels (hidden in tablet view) */}
+            <div className="absolute bottom-4 right-4 z-10 flex gap-2 mx-4 lg:visible invisible">
               <BinaryCarousel direction="down" height={150} speed={90000} />
               <BinaryCarousel direction="down" height={80} speed={90000} />
             </div>
 
-            {/* Content with hover effects */}
-            <div className="flex flex-col justify-center text-left md:mx-10 mx-3 relative h-full">
+            {/* Content with adjusted padding for tablet */}
+            <div className="flex flex-col justify-center text-left md:mx-6 lg:mx-10 mx-3 relative h-full">
               {/* Text Container with responsive lift */}
               <motion.div
                 className="relative z-20"
@@ -128,7 +129,7 @@ const WebDev = () => {
                 </p>
               </motion.div>
 
-              {/* Image (shown only when hovered) */}
+              {/* Image (shown only when hovered and screen > sm) */}
               <motion.div
                 className="absolute left-10 bottom-0 z-10"
                 initial={{ opacity: 0, scale: 0.8 }}
