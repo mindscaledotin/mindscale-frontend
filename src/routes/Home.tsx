@@ -20,7 +20,7 @@ const Home = () => {
 
       <HeroSection />
 
-      <Element name="webdev" id="webdev" className="m-10">
+      <Element name="webdev" id="webdev" className="m-0 md:m-10">
       <div className="mx-auto flex flex-col items-center w-[90vw] max-w-[1729px] min-h-[380px] mt-12">
         <h1
           className="font-lato font-bold text-[6vw] md:text-[120px] leading-tight text-center bg-gradient-to-r from-[#35FEFE] to-white/75 bg-clip-text text-transparent px-4 py-2"
